@@ -1,5 +1,8 @@
 pipeline {
     agent any
+        environment {
+        PATH = "$PATH:/opt/apache-maven-4.0.0-alpha-7/bin"
+    }
 
     stages{
         stage('Build Maven'){
