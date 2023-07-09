@@ -8,7 +8,7 @@ pipeline {
         stage('Build Maven'){
             steps{
                 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/akshyaganesh/devops-automation/']])
-                sh 'mvn clean install'
+                sh 'mvn clean package'
             }
         }
         stage('Build docker image'){
